@@ -1,0 +1,88 @@
+body{
+     background-color: #e8fcfb;
+}
+
+h1{
+	text-align: center;
+	font-size: 80px;
+	padding-top: 5px;
+	color: #333ed8;
+}
+.vikas{
+	height: 90px;
+	width: 100%;
+	background-image: linear-gradient(#da5959b5, #8a4c6be0, #bc8029c2);
+}
+ .s1{
+	
+    width: 70%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: white;
+    border: 3px solid rgba(0,47,52,1);
+    float: center;
+    padding: 10px;
+    align-self: center;
+    margin: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+.deep {
+    max-width: 1214px;
+    width: 100%;
+    display: block;
+    color: blue;
+    margin: 10px auto;
+    padding: 0px;
+    text-align: center;
+ 
+}
+.box {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 0px 20px;
+    text-align: left;
+    color: green;
+    border: 2px solid blue;
+    text-align: center;
+    padding-top: 28px;
+
+}
+.circle{
+	background-image: url("snake.jpg");
+	border: 1px solid black;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	float: left;
+	display: inline-block;
+}
+#txt{
+	margin-left: 20px;
+
+}
+#dev{
+	display: inline-block;
+}
+
+.avi{
+	padding: 5px;
+}
+#sub{
+	float: right;
+	
+	margin-right: 20px;
+	margin-bottom: 10px;
+	font-style: italic;
+	font-size: 16pt;
+	font-weight: bold;
+}
+input{
+	font-weight: bolder;
+	font-style: italic;
+	font-size: 12pt;
+    width:40%;
+    padding-left: auto;
+}

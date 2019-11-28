@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="icon" href="logo.png" type="image/icon type">
+	<link rel="stylesheet" type="text/css" href="productcss.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script type="text/javascript">
+		function textbox(){
+			document.getElementById('inp').style.display="inline-block";
+			document.getElementById('send').style.display="inline-block";
+
+		}
+		function comment(){
+    		var a=document.getElementById('inp').value;
+    		document.getElementById('para').innerHTML+=a+'<br><hr>';
+    		document.getElementById('inp').value="";
+		}
+		function show(){
+			document.getElementById('rent').style.display="block";
+		}
+		function cancel(){
+		document.getElementById('rent').style.display="none";
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<a href="#"><img src="logo.png" height="32px" width="32px"></a>
+		<a id="ss" href="#"> self share</a>
+		<input type="text" name="search" placeholder="what are you looking?">
+		<span><a href=""><i class="material-icons">search</i></a></span>
+		<a href="#"><button id="login">Login</button></a>
+		<a href="#"><button id="register">Register</button></a>
+	</header>
+	<aside>
+		<img src="boy.jpg" height="75px" width="75px">
+		<h1>&#8377;<span id="price">600</span></h1>
+		<span>+&#8377;<span id="extra">500</span> per extra day</span>
+		<hr width="95%">
+		<h2>Manpreet</h2>
+		member since 2017<br>
+		Usually responds within few days<br>
+		27 share<br>verified product<br>
+		<button onclick="show()">Consultation and rent</button>
+	</aside>
+	<div id="mainproduct">
+		<img src="microwave.jpg" height="400px" width="500px">
+		<h2>Microwave on rent</h2>
+		<p>
+			A best condition microwave is available for rent for party function. <br><br><fieldset> <b>Additional information</b><br><br> Brand Name: Black and Decker Microwave Capacity: 0.7 cu. ft. Color: Black Watts: 700 watts<br><br>
+			Product Type: Microwave Built In Timer: Yes Number of Power Levels: 11<br><br>Microwave Door Swing: Left Turntable: Yes Clock: Yes<br><br>Sensor Cook: Yes Interior dimensions: 11.5 in. H x 12.1 in. W x 8.2 in. D* Exterior<br><br>dimensions: 13 in. H x 17.3 in. W x 10.2 in. D* Electronic controls with LED display* 6 quick set menu buttons: popcorn, potato, pizza, vegetable, beverage and dinner plate* 30 second express cooking</fieldset>
+		</p><br><br>
+
+		<span onclick="textbox()">Comments</span><br>
+		<input type="textarea" id="inp" autofocus placeholder="Enter comment">
+		<input type="button" id="send" value="send" onclick="comment()"><br>
+		<p id="para"></p>
+		<h2>Location</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.380696314534!2d77.23111793311647!3d28.5969214904761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2e83abc927f%3A0x6601f4fde52a3898!2sKhan+Market!5e0!3m2!1sen!2sin!4v1563823104904!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	
+	<div id="rent">
+		<i id="clos" onclick="cancel()" class="material-icons">close</i>
+		<table>
+		<form>
+			<tr>
+			<td><label for="dates">Start date</label></td>
+			<td><label for="days">Days of use</label><br></td>
+			</tr>
+			<tr>
+			<td><input type="date" id="dates"></td> 
+			<td><input type="number" id="days" value="1"></td>
+			</tr>
+		</form>
+		</table>
+		<br>
+		<span id="price">Price Indication</span><br>
+		<span id="rate">&#8377;600</span><br>
+		<span class="grey">+&#8377; 2.25 service and warranty</span>
+		<br>
+		<hr><br>
+		<button id="payment"><i class="material-icons" style="position: relative;top:6px;">add_circle</i>Add payment method</button>
+		<br><br><hr>
+		<span id="a1">You only pay if rent continues.</span>
+		<br><hr><br><br>
+		<input type="checkbox">Immediately also place a call for other neighbors to increase my chances
+		<br><br><br>
+		<button id="chat">chat to consult</button>
+		<br><br>
+		<span class="grey">You automatically receive each other's phone and address if (s)he accepts the match</span><br><br>
+		
+	</div>
+</body>

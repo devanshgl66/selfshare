@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="productcss.css">
+		<link rel="icon" href="logo.png" type="image/icon type">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script type="text/javascript">
+		function textbox(){
+			document.getElementById('inp').style.display="inline-block";
+			document.getElementById('send').style.display="inline-block";
+
+		}
+		function comment(){
+    		var a=document.getElementById('inp').value;
+    		document.getElementById('para').innerHTML+=a+'<br><hr>';
+    		document.getElementById('inp').value="";
+		}
+		function show(){
+			document.getElementById('rent').style.display="block";
+		}
+		function cancel(){
+		document.getElementById('rent').style.display="none";
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<a href="#"><img src="logo.png" height="32px" width="32px"></a>
+		<a id="ss" href="#"> self share</a>
+		<input type="text" name="search" placeholder="what are you looking?">
+		<span><a href=""><i class="material-icons">search</i></a></span>
+		<a href="#"><button id="login">Login</button></a>
+		<a href="#"><button id="register">Register</button></a>
+	</header>
+	<aside>
+		<img src="boy1.jpg" height="75px" width="75px">
+		<h1>&#8377;<span id="price">500</span></h1>
+		<span>+&#8377;<span id="extra">100</span> per extra day</span>
+		<hr width="95%">
+		<h2>Manpreet</h2>
+		member since 2017<br>
+		Usually responds within few days<br>
+		27 share<br>verified product<br>
+		<button onclick="show()">Consultation and rent</button>
+	</aside>
+	<div id="mainproduct">
+		<img src="macbook.jpeg" height="400px" width="500px">
+		<h2>Apple Macbook on rent</h2>
+		<p>
+			A best conditionapple macbook is availble for rent. Renting price is very low  <br><br><fieldset> <b>Additional information</b><br><br>All new 2017 Apple MacBook Air<br>1.8GHz Intel Core i5 processor
+            <br>8GB LPDDR3 RAM, 128GB Solid State hard drive<br>13.3-inch screen, Intel HD Graphics 6000
+            <br>MacOS Sierra operating system<br>1.35kg laptop
+            <br>1440x900 pixels per inch with support for millions of colors,720p FaceTime HD camera<br></fieldset>
+		</p><br><br>
+
+		<span onclick="textbox()">Comments</span><br>
+		<input type="textarea" id="inp" autofocus placeholder="Enter comment">
+		<input type="button" id="send" value="send" onclick="comment()"><br>
+		<p id="para"></p>
+		<h2>Location</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6901.297156356558!2d77.28239348627915!3d30.132867845273523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1563857760454!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	
+	<div id="rent">
+		<i id="clos" onclick="cancel()" class="material-icons">close</i>
+		<table>
+		<form>
+			<tr>
+			<td><label for="dates">Start date</label></td>
+			<td><label for="days">Days of use</label><br></td>
+			</tr>
+			<tr>
+			<td><input type="date" id="dates"></td> 
+			<td><input type="number" id="days" value="1"></td>
+			</tr>
+		</form>
+		</table>
+		<br>
+		<span id="price">Price Indication</span><br>
+		<span id="rate">&#8377;500</span><br>
+		<span class="grey">+&#8377; 2.25 service and warranty</span>
+		<br>
+		<hr><br>
+		<button id="payment"><i class="material-icons" style="position: relative;top:6px;">add_circle</i>Add payment method</button>
+		<br><br><hr>
+		<span id="a1">You only pay if rent continues.</span>
+		<br><hr><br><br>
+		<input type="checkbox">Immediately also place a call for other neighbors to increase my chances
+		<br><br><br>
+		<button id="chat">chat to consult</button>
+		<br><br>
+		<span class="grey">You automatically receive each other's phone and address if (s)he accepts the match</span><br><br>
+		
+	</div>
+</body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register-Self Share</title>
+  <link rel="icon" href="logo.png" type="image/icon type">
+	<link rel="stylesheet" type="text/css" href="registercss.css">
+
+
+
+  <script>
+    function ValidateForm(){
+
+      
+
+      var pass1=document.getElementById('password').value;
+      var pass2=document.getElementById('password2').value;
+      if(pass1!=pass2){
+        alert("password do not match");
+        return false;
+      }
+      var username=<?php echo $usname;?>;
+      alert(username);  
+      if(username==1){
+        alert("Username already exists");
+        return false;
+      }
+    }
+
+  </script>
+</head>
+<body>
+	<div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    <form  method="post" action="register.php" onsubmit="return ValidateForm()">
+    <input type="text" name="uname" placeholder="Username" required />
+    <input type="password" id="password" name="password" placeholder="Password" required />
+    <input type="password" id="password2" name="password2" placeholder="Retype password" required />
+    <input type="text" pattern="[0-9]{10}" name="phno" title="Enter a valid phone number" placeholder="Phone number" required />
+    <input type="submit" name="signup_submit" value="SIGN ME UP" />
+    <button onclick="ValidateForm()">asd</button>
+    </form>
+  </div>
+  
+  <div class="right">
+    <span class="loginwith">Sign in with<br />social network</span>
+    
+    <a href="https://www.reddit.com/api/v1/authorize?client_id=xHGqMoGaupuV5w&response_type=code&state=tryandtry&redirect_uri=file:///C:/wamp/www/Self%20Share/register.html&scope=read" target="_blank"><button class="social-signin facebook">Log in with facebook</button></a>
+    <a href="https://www.twitter.com" target="_blank"><button class="social-signin twitter">Log in with Twitter</button></a>
+    <a href="https://accounts.google.com" target="_blank"><button class="social-signin google">Log in with Google+</button></a>
+  </div>
+  <div class="or">OR</div>
+</div>
+
+</body>
+</html>
